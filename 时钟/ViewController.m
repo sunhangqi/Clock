@@ -38,8 +38,18 @@ static const float perMinHour = 0.5;
     // Do any additional setup after loading the view, typically from a nib.
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
     [self timeChange];
+    //NSLog(@"This is a clock!");
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 400, 280, 30)];
+    label.text = @"Hellol, World!";
+    label.backgroundColor = [UIColor redColor];
+    label.font = [UIFont systemFontOfSize:23];
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.shadowColor = [UIColor greenColor];
+    label.shadowOffset = CGSizeMake(10, 10);
+    [self.view addSubview:label];
 }
-
 
 - (void)setSec {
     CALayer *secL = [CALayer layer];
